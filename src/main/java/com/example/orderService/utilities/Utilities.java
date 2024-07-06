@@ -2,6 +2,8 @@ package com.example.orderService.utilities;
 
 import org.json.JSONObject;
 
+import java.util.List;
+
 public class Utilities {
 
     public  static <T> String dataReturn(T obj) {
@@ -22,4 +24,10 @@ public class Utilities {
     }
 
 
+    public static boolean isNullOrEmpty(String elem) {
+        return elem == null || elem.isEmpty();
+    }
+    public static boolean isNullOrEmpty(List list) {
+        return list == null || list.size() == 0;
+    }
 }

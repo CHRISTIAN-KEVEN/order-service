@@ -16,4 +16,7 @@ public class Constants {
     public static enum PaymentMethod {
         PAY_ON_DELIVERY, MOBILE_MONEY,
     }
+    public static enum CART_ITEM_STATUS {
+        IN_CART, PLACED
+    }
 }

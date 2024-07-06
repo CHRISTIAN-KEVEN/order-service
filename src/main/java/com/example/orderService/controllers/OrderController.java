@@ -1,5 +1,6 @@
 package com.example.orderService.controllers;
 
+import com.example.orderService.dtos.requestDtos.AddToCartRequest;
 import com.example.orderService.dtos.requestDtos.PlaceOrderRequestDto;
 import com.example.orderService.services.OrderService;
 import lombok.extern.log4j.Log4j2;
@@ -24,8 +25,8 @@ public class OrderController {
     }
 
     @PostMapping("add-to-cart")
-    public ResponseEntity<String> addToCart(@RequestBody String request) {
-        return orderService.addToCart(request);
+    public ResponseEntity<String> addToCart(@RequestBody AddToCartRequest request) {
+        return new ResponseEntity(orderService.addToCart(request), HttpStatus.OK);
     }
 
     @PostMapping("place-order")
